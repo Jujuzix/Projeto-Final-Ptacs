@@ -1,0 +1,25 @@
+body{
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Navbar {
+    text-align: center;
+    position: relative;
+    padding: 12px;
+    background-color: #008b8b ;
+  
+  
+    
+
+}
+
+.lista h2{
+
+    margin: 25px;
+flex-direction: row;
+    text-align: center;
+  
+    display:inline-flex;
+    
+}
