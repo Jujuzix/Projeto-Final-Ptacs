@@ -1,35 +1,35 @@
 import './Todo.css'
 import Menu from './Componentes/menu';
 export default function Home() {
-   
-    const lista = JSON.parse(localStorage.getItem("Listavideos"));
-    return (
 
-        <header>
+  const listavideosLocalStorage = JSON.parse(localStorage.getItem("Listavideos"));
+  return (
 
-            <nav>
-                <div class="Navbar">
-                  <h1>Videos Site</h1>
-                 
-                  <div class="lista">
-                  
-                    <h2>Home</h2>
-                    <h2>Destaque</h2>
-                    <h2>Cadastro</h2>
-                 
-                  </div>
-                  </div>
-                    <menu />
+    <header>
 
+      <nav>
+        <div class="Navbar">
+          <h1>Videos Site</h1>
 
-               
-            </nav>
-        </header>
+          <ul>
+            <li>Home</li>
+            <li>Cadastro</li>
+            <li>Destaque</li>
+
+          </ul>
+        </div>
+        <div class="lista"></div>
+        <menu />
 
 
+
+      </nav>
+    </header>
 
 
 
 
-    );
+
+
+  );
 }

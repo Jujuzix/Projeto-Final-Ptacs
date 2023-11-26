@@ -1,32 +1,53 @@
 import { useEffect, useState } from "react" //Gerencia Estado
+import { Link } from "react-router-dom";
 import './Todo.css'
-import { Link } from "react-router-dom"; //Cria link para Navegação
 export default function Todo() {
-    const listaLocalStorage = JSON.parse(localStorage.getItem("Lista"));
-    const [tenis, setTenis] = useState("")
-    const [lista, setLista] = useState(listaLocalStorage || []);
-    const [id, setId] = useState(listaLocalStorage[listaLocalStorage.length - 1]?.id + 1 || 1);
+    const listavideosLocalStorage = JSON.parse(localStorage.getItem("Listavideos"));
+
+    const [listavideos, Listavideos] = useState(listavideosLocalStorage || []);
+    const [id, setId] = useState(VideolistaLocalStorage[VideolistaLocalStorage.length - 1]?.id + 1 || 1);
     const [titulo, setTitu] = useState("");
-    const [img, setImg] = useState("");
-    useEffect(() => { localStorage.setItem("Lista", JSON.stringify(lista)) }, [lista]);
+    const [video, setvideo] = useState("");
+    useEffect(() => { localStorage.setItem("listavideos", JSON.stringify(listavideos)) }, [listavideos]);
     //Estado
 
 
     //Salvar o formulário para a lista
     const salvar = (e) => {
         e.preventDefault();
-        setLista([...lista, {
-            tenis: tenis,
+        setVideolista([...lista, {
+            descricao: descricao,
             id: id,
             titulo: titulo,
-            img: img
+            video: video
 
         }])
         setId(id + 1);
-        setTenis("");
+        setvideo("");
 
     };
     return (
+        <header>
+
+        <nav>
+            <div class="Navbar">
+              <h1>Videos Site</h1>
+             
+             <ul>
+             <li>Home</li>
+             <li>Cadastro</li>
+              <li>Destaque</li>
+              
+             </ul>
+              </div>
+              <div class="lista"></div>
+                <menu />
+
+
+           
+        </nav>
+   
+    
         <div>
             <h1 class="d">Opções de Tênis</h1>
 
@@ -41,5 +62,6 @@ export default function Todo() {
                 </form>
             </div>
             </div>
+            </header>
     )
 }

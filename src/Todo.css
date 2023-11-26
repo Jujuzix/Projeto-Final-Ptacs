@@ -1,25 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   
+}
+
 body{
-    
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #ffffff;
 }
 
 .Navbar {
-    text-align: center;
-    position: relative;
-    padding: 12px;
-    background-color: #008b8b ;
-  
-  
-    
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    color: rgb(162, 81, 255);
+   box-shadow: 0 10px 40px #5a116b ;
+}
+
+ ul {
+   display: flex;
+   list-style: none;
+   gap: 25px;
+   align-items: center;
+   font-family:  Arial, sans-serif;
 
 }
 
-.lista h2{
+.Navbar ul li{
+    color: rgb(162, 81, 255);
+    padding: 8px 0;
+}
 
-    margin: 25px;
-flex-direction: row;
-    text-align: center;
-  
-    display:inline-flex;
-    
+.Navbar ul li:hover{
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(162, 81, 255);
+    color: rgb(255, 255, 255);
 }
