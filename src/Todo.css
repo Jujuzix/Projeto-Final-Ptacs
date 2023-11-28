@@ -37,3 +37,14 @@ body{
     border-bottom: 1px solid rgb(162, 81, 255);
     color: rgb(255, 255, 255);
 }
+
+
+input{
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.btn{
+    border-radius: 12px;
+    font-size: 20px;
+}

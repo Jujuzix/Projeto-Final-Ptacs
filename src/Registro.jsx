@@ -1,3 +1,4 @@
+/*
 import { useEffect, useState } from "react" //Gerencia Estado
 import { Link } from "react-router-dom";
 import './Todo.css'
@@ -64,4 +65,58 @@ export default function Todo() {
             </div>
             </header>
     )
+}
+*/
+
+
+
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import './Todo.css';
+
+export default function Todo() {
+    const listaVideosLocalStorage = JSON.parse(localStorage.getItem("listavideos")) || [];
+
+    const [listaVideos, setListaVideos] = useState(listaVideosLocalStorage);
+    const [id, setId] = useState(listaVideos[listaVideos.length - 1]?.id + 1 || 1);
+    const [titulo, setTitulo] = useState("");
+    const [video, setVideo] = useState("");
+
+    useEffect(() => {
+        localStorage.setItem("listavideos", JSON.stringify(listaVideos));
+    }, [listaVideos]);
+
+    const salvar = (e) => {
+        e.preventDefault();
+        setListaVideos([
+            ...listaVideos,
+            {
+                id: id,
+                titulo: titulo,
+                video: video
+            }
+        ]);
+        setId(id + 1);
+        setVideo("");
+        setTitulo("");
+    };
+
+    return (
+        <header>
+            <nav class="Navbar" >
+            <div>
+                <h1 class="d">Lista de Videos</h1>
+                <div class="add">
+                    <form onSubmit={salvar}>
+                        <input placeholder="adicione a url do video" type="text" value={video} onChange={(e) => setVideo(e.target.value)} />
+                        <input value={titulo} onChange={(e) => setTitulo(e.target.value)} />
+                        <input value={titulo} onChange={(e) => setTitulo(e.target.value)} />
+                        <button class="btn">Adicionar</button>
+                    </form>
+                </div>
+            </div>
+            </nav>
+           
+        </header>
+    );
 }

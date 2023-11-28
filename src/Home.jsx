@@ -2,7 +2,7 @@ import './Todo.css'
 import Menu from './Componentes/menu';
 export default function Home() {
 
-  const listavideosLocalStorage = JSON.parse(localStorage.getItem("Listavideos"));
+  const listavideosLocalStorage = JSON.parse(localStorage.getItem("listavideos"));
   return (
 
     <header>
@@ -20,10 +20,11 @@ export default function Home() {
         </div>
         <div class="lista"></div>
         <menu />
-
+        {listavideosLocalStorage.map((video)=><p>{video.titulo}</p>)}
 
 
       </nav>
+     
     </header>
 
 
