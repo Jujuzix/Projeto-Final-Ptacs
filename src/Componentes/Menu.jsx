@@ -1,10 +1,13 @@
 
-export default function nav(){
+export default function  Card({listaVideos}){
     return(
-        <div>
-        <h1>Menu</h1>
-        
-        
-        </div>
+       <div class="card">
+        <h1>{listaVideos.titulo}</h1>
+       </div>
+
+
+
+
+    
      );
 }

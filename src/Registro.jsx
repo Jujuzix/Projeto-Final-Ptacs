@@ -71,7 +71,7 @@ export default function Todo() {
 
 
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './Todo.css';
 
 export default function Todo() {
@@ -86,17 +86,20 @@ export default function Todo() {
         localStorage.setItem("listavideos", JSON.stringify(listaVideos));
     }, [listaVideos]);
 
-    const salvar = (e) => {
+    const navigate = useNavigate();
+
+    const salvar = async(e) => {
         e.preventDefault();
-        setListaVideos([
-            ...listaVideos,
-            {
+       await setListaVideos([  ...listaVideos,
+            { 
                 id: id,
                 titulo: titulo,
-                video: video
+                video: video,
+                descricao:descricao
             }
         ]);
-        setId(id + 1);
+        await setId(id + 1);
+        navigate("/");
         setVideo("");
         setTitulo("");
     };
@@ -110,13 +113,16 @@ export default function Todo() {
                     <form onSubmit={salvar}>
                         <input placeholder="adicione a url do video" type="text" value={video} onChange={(e) => setVideo(e.target.value)} />
                         <input value={titulo} onChange={(e) => setTitulo(e.target.value)} />
-                        <input value={titulo} onChange={(e) => setTitulo(e.target.value)} />
+                        <input value={descricao} onChange={(e) => setTitulo(e.target.value)} />
                         <button class="btn">Adicionar</button>
+                      
                     </form>
                 </div>
             </div>
             </nav>
            
         </header>
+
+       
     );
 }

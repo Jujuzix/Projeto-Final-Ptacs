@@ -23,7 +23,9 @@ export default function Home() {
         </div>
         <div class="lista"></div>
         <menu />
-        {listavideosLocalStorage.map((video) => <iframe width="300"
+        <div class="card">
+        {listavideosLocalStorage.map((video) => 
+        <iframe width="300"
           height="200"
           src={`https://www.youtube.com/embed/${video.video.slice(17)}`}
           title="video"
@@ -31,10 +33,23 @@ export default function Home() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen></iframe>)}
 
+          <menu/>
+
+          {listaVideos.map((vi))}
+         
+</div>
+
+
+
+                   
+
+
 
       </nav>
 
     </header>
+
+    
 
 
 
