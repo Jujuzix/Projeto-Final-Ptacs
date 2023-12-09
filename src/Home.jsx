@@ -15,64 +15,58 @@ export default function Home() {
           <ul>
 
 
-            <li>Home</li> 
+            <li>Home</li>
             <Link to="/registro">
-            <li>Cadastro</li>
+              <li>Cadastro</li>
             </Link>
-            
-           
+
+
             <Link to="/destaque"><li>Destaque</li></Link>
 
 
           </ul>
         </div>
         <div class="lista"></div>
-       
-
-        {listavideosLocalStorage.map((video)=> <iframe width="300" 
-       height="200"
-       src={`https://www.youtube.com/embed/${video.video.slice(17)}`} 
-       title="video" 
-       frameborder="0" 
-       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen></iframe>)}
-
-<menu />
-
-<div class="Card">
-        {listavideosLocalStorage.map((video, index) => (
-          <VideoCard key={index} video={video} />
-        ))}
-      </div>
-      
-     
-
-     
 
 
 
-                   
+
+
+
+        <div class="Card">
+          {listavideosLocalStorage.map((video, index) => (
+            <VideoCard key={index} video={video} />
+          ))}
+        </div>
+
+
+
+
+
+
+
+
 
 
 
       </nav>
 
 
-       
-        
-         
 
 
 
 
-                   
 
 
 
-      
+
+
+
+
+
     </header>
 
-    
+
 
 
 

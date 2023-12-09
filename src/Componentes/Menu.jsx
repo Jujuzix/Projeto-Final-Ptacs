@@ -1,14 +1,23 @@
 
-// VideoCard.js
+
 import React from 'react';
 
-const VideoCard = ({ video }) => {
+const Menu = ({ video }) => {
   return (
     <div class="Card">
+       <iframe
+        width="300"
+        height="200"
+        src={`https://www.youtube.com/embed/${video.video.slice(17)}`}
+        title="video"
       
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
+      <div class=""><h1>{video.titulo}</h1></div>
      
     </div>
   );
 };
 
-export default VideoCard;
+export default Menu;
