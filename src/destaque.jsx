@@ -1,5 +1,5 @@
 import './Todo.css'
-import Menu from './Componentes/menu';
+import Menu from './Componentes/Menu';
 import { Link } from 'react-router-dom';
 export default function Home() {
 

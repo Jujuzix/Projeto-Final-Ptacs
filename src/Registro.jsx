@@ -80,6 +80,7 @@ export default function Todo() {
     const [listaVideos, setListaVideos] = useState(listaVideosLocalStorage);
     const [id, setId] = useState(listaVideos[listaVideos.length - 1]?.id + 1 || 1);
     const [titulo, setTitulo] = useState("");
+    const [descricao, setDescricao] = useState("");
     const [video, setVideo] = useState("");
 
     useEffect(() => {
@@ -101,6 +102,7 @@ export default function Todo() {
         await setId(id + 1);
         navigate("/");
         setVideo("");
+        setDescricao("")
         setTitulo("");
     };
 
@@ -113,7 +115,7 @@ export default function Todo() {
                     <form onSubmit={salvar}>
                         <input placeholder="adicione a url do video" type="text" value={video} onChange={(e) => setVideo(e.target.value)} />
                         <input value={titulo} onChange={(e) => setTitulo(e.target.value)} />
-                        <input value={descricao} onChange={(e) => setTitulo(e.target.value)} />
+                        <input value={descricao} onChange={(e) => setDescricao(e.target.value)} />
                         <button class="btn">Adicionar</button>
                       
                     </form>

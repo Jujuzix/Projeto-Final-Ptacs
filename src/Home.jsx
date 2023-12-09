@@ -1,5 +1,5 @@
 import './Todo.css'
-import Menu from './Componentes/menu';
+import VideoCard from './Componentes/Menu';
 import { Link } from 'react-router-dom';
 export default function Home() {
 
@@ -39,9 +39,11 @@ export default function Home() {
 
 <menu />
 
-{ListaVideos.map((video) =>
-<menu video = {video}/>
-)}
+<div class="Card">
+        {listavideosLocalStorage.map((video, index) => (
+          <VideoCard key={index} video={video} />
+        ))}
+      </div>
       
      
 

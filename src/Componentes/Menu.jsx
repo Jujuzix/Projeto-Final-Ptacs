@@ -1,15 +1,14 @@
 
-export default function  Card({funfa}){
-    return(
-<div class="card">
-        <h1>{funfa.titulo}</h1>
-       
-    
-       
-       </div>
+// VideoCard.js
+import React from 'react';
 
+const VideoCard = ({ video }) => {
+  return (
+    <div class="Card">
+      
+     
+    </div>
+  );
+};
 
-
-    
-     );
-}
+export default VideoCard;
