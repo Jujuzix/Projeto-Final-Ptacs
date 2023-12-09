@@ -1,10 +1,12 @@
 
-export default function  Card({listaVideos}){
+export default function  Card({funfa}){
     return(
-       <div class="card">
-        <h1>{listaVideos.titulo}</h1>
+<div class="card">
+        <h1>{funfa.titulo}</h1>
+       
+    
+       
        </div>
-
 
 
 
