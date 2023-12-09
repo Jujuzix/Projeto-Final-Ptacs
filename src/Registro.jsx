@@ -79,6 +79,7 @@ export default function Todo() {
 
     const [listaVideos, setListaVideos] = useState(listaVideosLocalStorage);
     const [id, setId] = useState(listaVideos[listaVideos.length - 1]?.id + 1 || 1);
+    const [canal, setCanal] = useState("");
     const [titulo, setTitulo] = useState("");
     const [descricao, setDescricao] = useState("");
     const [video, setVideo] = useState("");
@@ -94,6 +95,7 @@ export default function Todo() {
        await setListaVideos([  ...listaVideos,
             { 
                 id: id,
+                canal: canal,
                 titulo: titulo,
                 video: video,
                 descricao:descricao
@@ -102,26 +104,30 @@ export default function Todo() {
         await setId(id + 1);
         navigate("/");
         setVideo("");
-        setDescricao("")
+        setDescricao("");
+        setCanal("");
         setTitulo("");
     };
 
     return (
         <header>
             <nav class="Navbar" >
-            <div>
-                <h1 class="d">Lista de Videos</h1>
+            <h1 >Lista de Videos</h1>
+            </nav>
+          
+              
                 <div class="add">
-                    <form onSubmit={salvar}>
+                    <form  onSubmit={salvar}>
                         <input placeholder="adicione a url do video" type="text" value={video} onChange={(e) => setVideo(e.target.value)} />
-                        <input value={titulo} onChange={(e) => setTitulo(e.target.value)} />
-                        <input value={descricao} onChange={(e) => setDescricao(e.target.value)} />
+                        <input placeholder="adicione o nome do canal escolhido" value={canal} onChange={(e) => setCanal(e.target.value)} />
+                        <input placeholder="adicione o titulo escolhido" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
+                        <input placeholder="adicione a decrição desejada" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
                         <button class="btn">Adicionar</button>
                       
                     </form>
                 </div>
-            </div>
-            </nav>
+           
+           
            
         </header>
 
