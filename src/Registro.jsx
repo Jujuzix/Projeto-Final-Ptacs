@@ -82,6 +82,7 @@ export default function Todo() {
     const [canal, setCanal] = useState("");
     const [titulo, setTitulo] = useState("");
     const [descricao, setDescricao] = useState("");
+    const [jogo, setJogos] = useState("");
     const [video, setVideo] = useState("");
 
     useEffect(() => {
@@ -97,6 +98,7 @@ export default function Todo() {
                 id: id,
                 canal: canal,
                 titulo: titulo,
+                jogo: jogo,
                 video: video,
                 descricao:descricao
             }
@@ -105,6 +107,7 @@ export default function Todo() {
         navigate("/");
         setVideo("");
         setDescricao("");
+        setJogos("");
         setCanal("");
         setTitulo("");
     };
@@ -122,6 +125,7 @@ export default function Todo() {
                         <input placeholder="adicione o nome do canal escolhido" value={canal} onChange={(e) => setCanal(e.target.value)} />
                         <input placeholder="adicione o titulo escolhido" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
                         <input placeholder="adicione a decrição desejada" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
+                        <input placeholder="adicione o jogo " value={jogo} onChange={(e) => setJogos(e.target.value)} />
                         <button class="btn">Adicionar</button>
                       
                     </form>

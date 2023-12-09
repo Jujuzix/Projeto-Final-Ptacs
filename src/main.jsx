@@ -2,7 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Home'
+import Destaque from './destaque.jsx';
 import Registro from './Registro.jsx';
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -11,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path='/registro' element={<Registro />}></Route>
-
+        <Route path='/destaque' element={<Destaque />}></Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
