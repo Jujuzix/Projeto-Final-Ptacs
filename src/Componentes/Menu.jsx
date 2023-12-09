@@ -14,7 +14,7 @@ const Menu = ({ video }) => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>
-      <div class=""><h1>{video.titulo}</h1></div>
+      <div class="dentro"><h1>{video.titulo}</h1></div>
      
     </div>
   );

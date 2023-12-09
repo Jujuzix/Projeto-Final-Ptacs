@@ -51,12 +51,26 @@ input{
 }
 
 .Card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 10px;
-    max-width: 300px;
-    transition: transform 0.3s ease-in-out;
+    background-color: rgb(94, 94, 94);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
   }
   
+  .dentro{
+    display: grid;
+    border-style: inset;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    text-align: center;
+    margin: 10px;
+    width: 400px;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 20px;
+  
+    color: rgb(0, 0, 0);
+  }
