@@ -98,7 +98,6 @@ export default function Todo() {
                 id: id,
                 canal: canal,
                 titulo: titulo,
-                jogo: jogo,
                 video: video,
                 descricao:descricao
             }
@@ -107,7 +106,6 @@ export default function Todo() {
         navigate("/");
         setVideo("");
         setDescricao("");
-        setJogos("");
         setCanal("");
         setTitulo("");
     };
@@ -121,11 +119,15 @@ export default function Todo() {
               
                 <div class="add">
                     <form  onSubmit={salvar}>
+                        <h1>Video Desejado:</h1>
                         <input placeholder="adicione a url do video" type="text" value={video} onChange={(e) => setVideo(e.target.value)} />
+                        <h1>Canal:</h1>
                         <input placeholder="adicione o nome do canal escolhido" value={canal} onChange={(e) => setCanal(e.target.value)} />
+                        <h1>Titulo:</h1>
                         <input placeholder="adicione o titulo escolhido" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
+                        <h1>Descrição:</h1>
                         <input placeholder="adicione a decrição desejada" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
-                        <input placeholder="adicione o jogo " value={jogo} onChange={(e) => setJogos(e.target.value)} />
+                      
                         <button class="btn">Adicionar</button>
                       
                     </form>

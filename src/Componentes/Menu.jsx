@@ -1,9 +1,10 @@
 
-
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 const Menu = ({ video }) => {
   return (
+    <div>
     <div class="Card">
       <iframe
         width="300"
@@ -18,14 +19,15 @@ const Menu = ({ video }) => {
         <h1 class='princ'>Nome do Canal:
           <p class="menor">{video.canal}</p>
           Titulo do Vídeo:<p>{video.titulo}</p>
-          A Descrição do Vídeo:
-          <p>{video.descricao}</p>
-          Jogo: <p>{video.jogo}</p>
+         
+         
+       
         </h1>
-
+<button > <Link to="/detalhe">Mais Sobre</Link></button>
       </div>
 
 
+    </div>
     </div>
   );
 };
