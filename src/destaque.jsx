@@ -4,7 +4,7 @@ import VideoCard from './Componentes/Menu';
 import { Link } from 'react-router-dom';
 export default function destaque() {
 
-  const listavideosLocalStorage = JSON.parse(localStorage.getItem("listavideos")) || [];
+  const listavideos = JSON.parse(localStorage.getItem("listavideos")) || [];
   return (
 
     <header>
@@ -23,7 +23,7 @@ export default function destaque() {
         </div>
         <div class="lista"></div>
         <div class="Card">
-          {listavideosLocalStorage.map((video, index) => (
+          {listavideos.slice(-2).map((video, index) => (
             <VideoCard key={index} video={video} />
           ))}
         </div>
