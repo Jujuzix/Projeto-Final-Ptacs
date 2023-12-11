@@ -9,14 +9,14 @@ export default function destaque() {
 
     <header>
       <nav>
-        <div class="Navbar">
+        <div  class="Navbar">
           <h1>Videos Site</h1>
           <ul>
             <li>Home</li>
-            <Link to="/registro">
+            <Link class="link" to="/registro">
               <li>Cadastro</li>
             </Link>
-            <Link to="/destaque">
+            <Link class="link" to="/destaque">
               <li>Destaque</li>
             </Link>
           </ul>
@@ -25,6 +25,7 @@ export default function destaque() {
         <div class="Card">
           {listavideosLocalStorage.map((video, index) => (
             <Detalhe key={index} video={video} />
+            
           ))}
         </div>
       </nav>

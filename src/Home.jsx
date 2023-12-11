@@ -8,14 +8,14 @@ export default function Home() {
     <header>
       <nav>
         <div class="Navbar">
-          <h1>GymVideos</h1>
+          <h1>Games Videos</h1>
           <ul>
-            <li>Home</li>
-            <Link to="/registro">
-              <li>Cadastro</li>
+            <li>🏠Home</li>
+            <Link class="link" to="/registro">
+              <li>📹Cadastro</li>
             </Link>
-            <Link to="/destaque">
-              <li>Destaque</li>
+            <Link class="link" to="/destaque">
+              <li>⭐Destaque</li>
               </Link>
             
           </ul>

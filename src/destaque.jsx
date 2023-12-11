@@ -10,20 +10,25 @@ export default function destaque() {
     <header>
       <nav>
         <div class="Navbar">
-          <h1>Videos Site</h1>
+          <h1>Games Videos</h1>
           <ul>
-            <li>Home</li>
-            <Link to="/registro">
+            <Link class="link" to="/">
+              <li>Home</li>
+            </Link>
+
+            <Link  class="link" to="/registro">
               <li>Cadastro</li>
             </Link>
-            <Link to="/destaque">
+
+            <Link  class="link"  to="/destaque">
               <li>Destaque</li>
             </Link>
+
           </ul>
         </div>
         <div class="lista"></div>
         <div class="Card">
-          {listavideos.slice(-2).map((video, index) => (
+          {listavideos.slice(-6).map((video, index) => (
             <VideoCard key={index} video={video} />
           ))}
         </div>

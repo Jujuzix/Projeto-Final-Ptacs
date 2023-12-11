@@ -23,7 +23,7 @@ const Menu = ({ video }) => {
          
        
         </h1>
-<button > <Link to="/detalhe">Mais Sobre</Link></button>
+<button > <Link class="link" to="/detalhe">Mais Sobre</Link></button>
       </div>
 
 

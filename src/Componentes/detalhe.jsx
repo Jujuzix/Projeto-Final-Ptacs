@@ -17,9 +17,13 @@ const detalhe = ({ video }) => {
         <h1 class='princ'>
           A Descrição do Vídeo:
           <p>{video.descricao}</p>
+          Tema:
+          <p>{video.jogo}</p>
+          Data em que o video foi publicado:
+          <p>{video.data}</p>
        
         </h1>
-        <button > <Link to="/">Voltar para Pagína Inicial</Link></button>
+        <button > <Link class="link" to="/">Voltar para Pagína Inicial</Link></button>
       </div>
 
 
