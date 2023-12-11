@@ -28,11 +28,12 @@ export default function destaque() {
         </div>
         <div class="lista"></div>
         <div class="Card">
-          {listavideos.slice(-4).map((video, index) => (
+          {listavideos.slice(-5).map((video, index) => (
             <VideoCard key={index} video={video} />
           ))}
         </div>
       </nav>
+     
     </header>
 
 
