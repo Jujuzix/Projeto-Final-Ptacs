@@ -6,16 +6,16 @@ export default function Home() {
   const listavideosLocalStorage = JSON.parse(localStorage.getItem("listavideos")) || [];
   return (
     <header>
-      <nav>
-        <div class="Navbar">
+      <nav >
+        <div class="Navbar" >
           <h1>Games Videos</h1>
           <ul>
-            <li>🏠Home</li>
+            <li>Home</li>
             <Link class="link" to="/registro">
-              <li>📹Cadastro</li>
+              <li>Cadastro</li>
             </Link>
             <Link class="link" to="/destaque">
-              <li>⭐Destaque</li>
+              <li>Destaque</li>
               </Link>
             
           </ul>
