@@ -1,17 +1,17 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-   
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
 }
 
-body{
-    background-color: #ffffff;
+body {
+  background-color: #ffffff;
 }
 
-.link{
+.link {
   text-decoration: none;
-  color: #000000  ;
+  color: #000000;
 }
 
 
@@ -24,111 +24,111 @@ body{
   padding: 15px 30px;
 }
 
- ul {
-   display: flex;
-   list-style: none;
-   gap: 25px;
-   align-items: center;
-   font-family:  Arial, sans-serif;
+ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+  font-family: Arial, sans-serif;
 
 }
 
-.Navbar ul li{
-    color: rgb(255, 255, 255) ;
-    padding: 8px 0;
+.Navbar ul li {
+  color: rgb(255, 255, 255);
+  padding: 8px 0;
 }
 
-.Navbar ul li:hover{
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(162, 81, 255);
-    color:rgb(162, 81, 255);
+.Navbar ul li:hover {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(162, 81, 255);
+  color: rgb(162, 81, 255);
 }
 
 
-.add input{
+.add input {
   justify-content: center;
-  
-    display: flex;
+
+  display: flex;
   flex-direction: column;
   align-items: center;
-    height: 50px;
-    width: 450px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    font-size: 21px;
-    
+  height: 50px;
+  width: 450px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  font-size: 21px;
+
 }
 
 .add input:focus {
   outline: none;
-  border-color: rgb(65, 0, 144); 
-  box-shadow: 0 0 5px rgb(65, 0, 144); 
+  border-color: rgb(65, 0, 144);
+  box-shadow: 0 0 5px rgb(65, 0, 144);
 }
 
 
 
-.btn{
-    border-radius: 12px;
-    height: 50px;
-    width: 450px;
-    font-size: 20px;
-    padding: 10px 20px;
-    border: #65007b 3px solid;
-    border-radius: 5px;
-    cursor: pointer;
-    
-}
-
-button{
+.btn {
   border-radius: 12px;
-    height: 50px;
-    width: 350px;
-    font-size: 20px;
-    padding: 10px 20px;
-    border: #65007b 3px solid;
-    border-radius: 5px;
-    cursor: pointer;
+  height: 50px;
+  width: 450px;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: #65007b 3px solid;
+  border-radius: 5px;
+  cursor: pointer;
+
 }
 
-  
+button {
+  border-radius: 12px;
+  height: 50px;
+  width: 350px;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: #65007b 3px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
 
 
 .Card {
-    background-color: rgb(218, 216, 216);
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  
-  }
-  
-  .dentro{
-    display: grid;
-    border-style: inset;
-    padding: 15px;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    text-align: center;
-    margin: 10px;
-    width: 400px;
-    text-align: center;
-    flex-direction: column;
-    border-radius: 20px;
-    box-shadow: 0 5px 5px #9d0151 ;
-    color: rgb(0, 0, 0);
-  }
+  background-color: rgb(218, 216, 216);
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
-  .princ{
-    color: #65007b;
-  }
-
-.menor{
-    font-size: 20px;
 }
 
-  p{
-    color: #000000;
-    font-size: 15px;
-  }
+.dentro {
+  display: grid;
+  border-style: inset;
+  padding: 15px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  text-align: center;
+  margin: 10px;
+  width: 400px;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px #9d0151;
+  color: rgb(0, 0, 0);
+}
+
+.princ {
+  color: #65007b;
+}
+
+.menor {
+  font-size: 20px;
+}
+
+p {
+  color: #000000;
+  font-size: 15px;
+}

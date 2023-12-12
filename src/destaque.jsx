@@ -28,8 +28,9 @@ export default function destaque() {
         </div>
         <div class="lista"></div>
         <div class="Card">
-          {listavideos.slice(-5).map((video, index) => (
-            <VideoCard key={index} video={video} />
+          {/* o intuito do slice será de puxar os ultimos 5 videos que serão cadastrados para a pagína de videos em destaque. */}
+            {listavideos.slice(-5).map((video, index) => (
+              <VideoCard key={index} video={video} />
           ))}
         </div>
       </nav>
